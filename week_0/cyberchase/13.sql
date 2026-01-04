@@ -1,0 +1,2 @@
+-- list the titles of episodes where the title ends with '!' or starts with 'z'. (Involve at least one condition, using WHERE with AND or OR)
+SELECT "title" FROM "episodes" WHERE "title" LIKE '%!' OR "title" LIKE 'z%';
