@@ -18,4 +18,10 @@ Exercises in this repo come from the [CS50 SQL Course 2024](https://cs50.harvard
 
 # to show the column names at the top
 .headers on
+
+# to display the execution time of queries
+.timer on
+
+# to turn off the timer
+.timer off
 ```
