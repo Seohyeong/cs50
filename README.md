@@ -25,3 +25,15 @@ Exercises in this repo come from the [CS50 SQL Course 2024](https://cs50.harvard
 # to turn off the timer
 .timer off
 ```
+
+### MySQL
+```
+# to install mysql with brew
+brew install mysql
+
+# to start mysql now and restart at login:
+brew services start mysql
+
+# to connect run:
+mysql -u root
+```
