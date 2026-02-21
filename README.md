@@ -37,3 +37,16 @@ brew services start mysql
 # to connect run:
 mysql -u root
 ```
+
+## PostgreSQL
+```
+# to install postgresql with brew
+brew install postgresql
+
+# to start postgresql@14 now and restart at login:
+brew services start postgresql@14
+
+# to connect run:
+psql postgresql://postgres@127.0.0.1:5432/postgres
+```
+
