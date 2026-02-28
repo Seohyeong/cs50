@@ -57,3 +57,8 @@ brew services start postgresql@14
 psql postgresql://postgres@127.0.0.1:5432/postgres
 ```
 
+### html, css, javascript
+# to serve the webpage
+```
+npx http-server
+```
