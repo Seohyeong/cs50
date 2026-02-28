@@ -18,7 +18,7 @@ Exercises in this repo come from
 8. HTML, CSS, Javascript
 9. Flask
 
-### Useful `sqlite3` Commands
+## Useful `sqlite3` Commands
 ```
 # to display results in a columnar format.
 .mode column
@@ -33,7 +33,7 @@ Exercises in this repo come from
 .timer off
 ```
 
-### MySQL
+## MySQL
 ```
 # to install mysql with brew
 brew install mysql
