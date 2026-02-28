@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Question 1
+                // TODO: how do I unclick the rest of the buttons when one button is clicked?
+                const correct = ['#q1_ans3'];
+                const incorrect = ['#q1_ans1', '#q1_ans2', '#q1_ans4', '#q1_ans5'];
+                const defaultColor = '#d9edff';
+
+                for (correctButtonId of correct) {
+                    let button = document.querySelector(correctButtonId);
+                    // TODO: how are these two different?
+                    // button.onclick = function() {
+                    //     button.style.backgroundColor = button.style.backgroundColor !== 'green' ? 'green' : defaultColor;
+                    //     document.querySelector('#q1_result').innerHTML = 'correct!';
+                    // }
+                    button.addEventListener('click', function() {
+                        button.style.backgroundColor = button.style.backgroundColor !== 'green' ? 'green' : defaultColor;
+                        document.querySelector('#q1_result').innerHTML = 'correct!';
+                    });
+                }
+
+                for (incorrectButtonId of incorrect) {
+                    let button = document.querySelector(incorrectButtonId);
+                    button.onclick = function() {
+                        button.style.backgroundColor = button.style.backgroundColor !== 'red' ? 'red' : defaultColor;
+                        document.querySelector('#q1_result').innerHTML = 'incorrect!';
+                    }
+                }
+                
+                // Question 2
+                document.querySelector('#q2_submit').addEventListener('click', function(event) {
+                    event.preventDefault();
+                    const input = document.querySelector('#q2_ans');
+                    if (input.value.toLowerCase() === "switzerland") {
+                        input.style.backgroundColor = 'green';
+                        document.querySelector('#q2_result').innerHTML = 'correct!';
+                    } else {
+                        input.style.backgroundColor = 'red';
+                        document.querySelector('#q2_result').innerHTML = 'incorrect!';
+                    }
+                })
+            });
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>What is the approximate ratio of people to sheep in New Zealand?</h3>
+                <p id="q1_result"></p>
+                <button id="q1_ans1">6 people per 1 sheep</button>
+                <button id="q1_ans2">3 people per 1 sheep</button>
+                <button id="q1_ans3">1 person per 1 sheep</button>
+                <button id="q1_ans4">1 people per 3 sheep</button>
+                <button id="q1_ans5">1 person per 6 sheep</button>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>In which country is it illegal to own only one guinea pig?</h3>
+                <p id="q2_result"></p>
+                <form>
+                    <input id="q2_ans" autocomplete="off" placeholder="type your answer" type="text">
+                    <button id="q2_submit">Check Answer</button>
+                </form>
+                <!-- TODO: Add free response question here -->
+            </div>
+        </div>
+    </body>
+</html>
